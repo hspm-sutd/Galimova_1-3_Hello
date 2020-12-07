@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="ru">
+
+<head>
+</head>
+
+<body>
+   Имя <input id="name" />
+   Фамилия <input id="surname" />
+   <p><button id="btn"> Готово </button></p>
+   <p id="message"></p>
+   <script>
+      function test(){
+            let name = document.querySelector('#name')
+            let surname = document.querySelector('#surname')
+            let message = document.querySelector('#message')
+            if (name.value === null || name.value === "") {
+               alert("Введите имя!");
+            }
+            else {
+               let text = "Привет " + name.value + " " + surname.value + "!"
+               message.innerHTML += '<br>' + text
+            }
+      }
+      let btn = document.querySelector('#btn')
+      btn.addEventListener('click', test)
+    </script>
+</body>
